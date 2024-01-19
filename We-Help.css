@@ -1,0 +1,125 @@
+body{
+    background-color:#EEE5BF;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+.headline{
+    font-family: 'Helvetica', Sans-Serif;
+    text-align:center;
+    font-weight:bold;
+    font-size:30px;
+
+}
+
+.title{
+    margin-bottom:10px;
+    font-weight:bold;
+    font-size:24px;
+    text-align:center;
+    margin-bottom:10px;
+    color:grey;
+}
+.content{
+    width:80%;
+    border:2px dashed #D3C1C3;
+    padding:15px;
+    margin-top:15px;
+    margin-bottom:15px;
+    margin-left:auto;
+    margin-right:auto;
+    flex-wrap:wrap;
+    justify-content:center;
+    background-color:#E8F8C1;
+    border-radius:10px;
+
+    }
+
+.frame{
+    flex-wrap:wrap;
+    justify-content:center;
+
+}
+
+.table-cell{
+    font-weight:bold;
+    text-align:center
+}
+
+#table-headline{
+    text-align:center;
+    font-size:22px;
+
+
+}
+
+.table-cell-online{
+    background-color:aquamarine;
+    font-weight:bold;
+    text-align:center;
+
+}
+.table-cell-f2f{
+    background-color:aquamarine;
+    font-weight:bold;
+    text-align:center;
+
+}
+
+.table-cell-program{
+    background-color:greenyellow;
+    font-weight:bold;
+    text-align:center;
+
+}
+.table-cell-personal{
+    background-color:pink;
+    font-weight:bold;
+    text-align:center;
+
+}
+
+table{
+    width: 90%;
+    table-layout:fixed;
+    
+}
+td{
+    min-width: 40px;
+    
+}
+
+@media(max-width:500px){
+    #table-headline{
+        font-size:16px;
+    }
+    .table-cell{
+        font-size:12px;
+    }
+    .table-cell-online{
+        font-size:12px;
+    }
+    .table-cell-f2f{
+        font-size:12px;
+    }
+    .table-cell-program{
+        font-size:12px;
+    
+    }
+    .table-cell-personal{
+        font-size:12px;
+    
+    }
+    .headline{
+        font-size:20px;
+    }
+    .title{
+        font-size:16px;
+    }
+    .content{
+        font-size:12px;
+    }
+}
+
+
+
+
