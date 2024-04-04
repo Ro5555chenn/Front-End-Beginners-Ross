@@ -69,6 +69,11 @@ body{
     display:block;
 }
 
+#switch2:checked~.mobile-menu{
+    right:-100%;
+    display:none;
+}
+
 #switch{
     display:none;
 }
