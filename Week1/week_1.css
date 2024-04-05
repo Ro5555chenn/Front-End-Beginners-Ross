@@ -281,13 +281,17 @@ body{
     .box-1{
         width:90%;
         margin:1%;
+        margin:10px;
     }
     #box-rwd{
         width:90%;
+        margin:10px;
     }
     .box-2{
         width:90%;
         margin:1%;
+        margin:10px;
+        margin:10px;
     }
     .pic-2{
         width:100%;
@@ -295,6 +299,7 @@ body{
     .box-3{
         width:90%;
         margin:1%;
+        margin:10px;
     }
     .pic-3{
         width:100%;
@@ -302,6 +307,7 @@ body{
     #box-rwd-2{
         width:90%;
         margin:1%;
+        margin:10px;
     }
     .item{
         display:none;
