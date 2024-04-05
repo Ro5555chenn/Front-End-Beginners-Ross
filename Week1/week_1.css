@@ -59,7 +59,6 @@ body{
     top:0;
     right:-100%;
     z-index: 100;
-    transition: 0.5s;
     display:none;
 
 }
@@ -67,11 +66,6 @@ body{
 #switch:checked~.mobile-menu{
     right:0;
     display:block;
-}
-
-#switch2:checked~.mobile-menu{
-    right:-100%;
-    display:none;
 }
 
 #switch{
