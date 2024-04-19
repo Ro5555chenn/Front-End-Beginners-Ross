@@ -90,11 +90,11 @@ def spot_details(data):
     with open('spot.csv', 'w', newline='', encoding='utf-8') as f:
         for item in data:
             # 獲得景點名稱、行政區、經緯度跟圖片連結這些必要的資訊
-            spot_name = item.get("stitle")
-            district = item.get("District")
-            longitude = item.get("longitude")
-            latitude = item.get("latitude")
-            image_url = item.get("ImageURL")
+            spot_name = item.get("stitle").strip()
+            district = item.get("District").strip()
+            longitude = item.get("longitude").strip()
+            latitude = item.get("latitude").strip()
+            image_url = item.get("ImageURL").strip()
             line = f"{spot_name},{district},{longitude},{latitude},{image_url}\n"
             f.write(line)
 
@@ -106,7 +106,7 @@ spot_details(merged_results)
 def group_by_MRT(data):
     MRT_groups = {}
     for item in data:
-        MRT = item.get('MRT')  # 獲得捷運站資訊
+        MRT = item.get('MRT', '').strip()  # 獲得捷運站資訊
         if MRT not in MRT_groups:
             MRT_groups[MRT] = []  # 如果該捷運站還沒有分組，就初始化一個空列表
         MRT_groups[MRT].append(item['stitle'])  # 添加景點名稱到相對應的捷運站
@@ -118,8 +118,7 @@ MRT_data = group_by_MRT(merged_results)
 
 # 輸出成 mrt.csv 檔案
 with open('mrt.csv', 'w', newline='', encoding='utf-8') as f:
-    writer = csv.writer(f, quoting=csv.QUOTE_MINIMAL) 
-    for MRT, spots in MRT_data.items(): 
-        # 把景點名稱寫進在捷運站後面，並以逗點隔開
+    for MRT, spots in MRT_data.items():
         spots_str = ','.join(spots)
-        writer.writerow([MRT,spots_str])
+        # 直接写入一行数据，完全控制引号
+        f.write(f"{MRT},{spots_str}\n")
