@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/index.css"/>
+    <title>系統首頁</title>
+</head>
+<body>
+    <div class = "gallery">
+        <div class = "slogan">歡迎光臨，請輸入帳號密碼</div>
+    </div>
+    <div class = "block">
+        <div class = "system">
+            <div class = "headLine">登入系統</div>
+            <form id = "loginInForm" action = "/signin" method = "post">
+                <div>
+                    <label for = "username">帳號:</label>
+                    <input type = "text" id = "username" name = "username">
+                </div> 
+                <div>
+                    <label for = "password">密碼:</label>
+                    <input type = "password" id = "password" name = "password">
+                </div>
+                <div class = "agreement">
+                    <label for = "terms">同意條款</label>
+                    <input type = "checkbox" id="terms" name = "terms">
+                </div>
+                <div class = "logInButton">
+                    <button type = "button" id ="Submit" onclick = "checkAgreement()" >登入</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function checkAgreement() {
+            const checkbox = document.getElementById("terms");
+            const form = document.getElementById("loginInForm");
+            if (!checkbox.checked) {
+                alert("Please check the checkbox first");
+            } else {
+                form.submit()
+            }
+        }
+    </script>
+</body>
+</html>
