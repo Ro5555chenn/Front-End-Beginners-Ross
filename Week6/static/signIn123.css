@@ -16,24 +16,30 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    height:300px;
+    margin-top:40px;
+    height:200px;
 }
 
-.headLine{
-    font-size:24px;
-    font-weight:bold;
+.system{
     text-align:center;
+}
+
+.headline{
+    font-size:30px;
     margin-bottom:20px;
 }
 
-.logInButton{
-    text-align:center;
-    margin-top:10px;
-
+.text{
+    font-size:24px;
 }
 
-.signUpButton{
-    text-align:center;
-    margin-top:10px;
+.block_2{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:40px;
+}
 
+.system{
+    text-align:center;
 }
