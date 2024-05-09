@@ -4,7 +4,6 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from urllib.parse import quote
 from starlette.middleware.sessions import SessionMiddleware 
-from fastapi.responses import JSONResponse
 import mysql.connector
 
 app = FastAPI()  
