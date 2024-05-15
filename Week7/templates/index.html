@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "/static/index.css"/>
+    <title>系統首頁</title>
+</head>
+<body>
+    <div class = "gallery">
+        <div class = "slogan">歡迎光臨，請註冊登入系統</div>
+    </div>
+    <div class = "block">
+        <div class = "system">
+            <div class = "headLine">註冊帳號</div>
+            <form id = "signUpForm" action = "/signup" method = "post">
+                <div>
+                    <label for = "signUpName">姓名:</label>
+                    <input type = "text" id = "signUpName" name = "signUpName">
+                </div> 
+                <div>
+                    <label for = "signUpUsername">帳號:</label>
+                    <input type = "text" id = "signUpUsername" name = "signUpUsername">
+                </div> 
+                <div>
+                    <label for = "signUpPassword">密碼:</label>
+                    <input type = "password" id = "signUpPassword" name = "signUpPassword">
+                </div>
+                <div class = "signUpButton">
+                    <button type = "button" id = "signUpButton" onclick="validateForm()">註冊</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <hr/>
+    <div class = "block">
+        <div class = "system">
+            <div class = "headLine">登入系統</div>
+            <form id = "logInForm" action = "/signin" method = "post">
+                <div>
+                    <label for = "logInUsername">帳號:</label>
+                    <input type = "text" id = "logInUsername" name = "logInUsername">
+                </div> 
+                <div>
+                    <label for = "logInPassword">密碼:</label>
+                    <input type = "password" id = "logInPassword" name = "logInPassword">
+                </div>
+                <div class = "logInButton">
+                    <button type = "button" id = "logInButton" onclick="logIn()">登入</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function validateForm() {
+            const signUpName = document.getElementById("signUpName").value;
+            const signUpUsername = document.getElementById("signUpUsername").value;
+            const signUpPassword = document.getElementById("signUpPassword").value;
+            const forms = document.getElementById("signUpForm");
+            if (!signUpName || !signUpUsername || !signUpPassword) {
+                alert("請將姓名、帳號和密碼填寫完畢");
+            }else{
+                forms.submit()
+            }
+        }
+        function logIn() {
+            const logInUsername = document.getElementById("logInUsername").value;
+            const logInPassword = document.getElementById("logInPassword").value;
+            const form = document.getElementById("logInForm");
+            if ( !logInUsername || !logInPassword) {
+                alert("請將帳號和密碼填寫完畢");
+            }else{
+                form.submit()
+            }
+        }
 
+
+    </script>
+</body>
+</html>
